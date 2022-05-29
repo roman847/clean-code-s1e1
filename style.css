@@ -28,7 +28,7 @@ body {
 .matrix-info__image {
   width: 100%;
 }
- .matrix-info__more-link {
+.matrix-info__more-link {
   font-family: fantasy, cursive;
 }
 
@@ -50,7 +50,6 @@ body {
 .todo__add-task {
   display: flex;
 }
-
 
 button {
   background: none;
@@ -114,7 +113,7 @@ li > * {
   vertical-align: middle;
 }
 
-.todo-list__checkbox{
+.todo-list__checkbox {
   margin: 0 10px;
 }
 li > label {
@@ -137,7 +136,7 @@ li > input[type="text"] {
 
 /* Completed */
 ul#completed-tasks label {
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 
@@ -146,7 +145,7 @@ ul#completed-tasks label {
   display: none;
 }
 
- .todo__list-item input[type="text"] {
+.todo__list-item input[type="text"] {
   display: inline-block;
   width: 224px;
 }
