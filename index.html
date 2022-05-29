@@ -18,7 +18,7 @@
 
   <body>
     <div class="matrix-info">
-      <img class="matrix-info__image" src="./eisenhower-matrix.jpg">
+      <img class="matrix-info__image" src="./eisenhower-matrix.jpg" alt="matrix-description">
       <a class='matrix-info__more-link' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?
       </a>
     </div>
@@ -44,30 +44,30 @@
           <input type="text" class="input-text task todo__input-text">
           <button class="todo__action-text">Edit</button>
           <button class="todo__delete">
-            <img src="./remove.svg">
+            <img src="./remove.svg" alt="del">
           </button>
         </li>
 
 
         <li class="todo__list-item">
-          <input type="checkbox" class="todo-list__checkbox">
-          <label class="task">Go Shopping</label>
+          <input id="go-shopping" type="checkbox" class="todo-list__checkbox">
+          <label for="go-shopping" class="task">Go Shopping</label>
           <input type="text" value="Go Shopping" class="input-text task todo__input-text">
           <button class='todo__action-text'>Save</button>
           <button class="todo__delete">
-            <img src="./remove.svg">
+            <img src="./remove.svg" alt="del">
           </button>
         </li>
       </ul>
       <h3>Completed</h3>
       <ul id="completed-tasks">
         <li>
-          <input type="checkbox" class="todo-list__checkbox" checked>
-          <label class="task">See the Doctor</label>
+          <input id="complete-task" type="checkbox" class="todo-list__checkbox" checked>
+          <label for="complete-task" class="task">See the Doctor</label>
           <input type="text" class="input-text task todo__input-text">
           <button class="todo__action-text">Edit</button>
           <button class="todo__delete">
-            <img src="./remove.svg">
+            <img src="./remove.svg" alt="del">
           </button>
         </li>
       </ul>
