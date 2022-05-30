@@ -31,20 +31,21 @@ var createNewTaskElement = function (taskString) {
 
   label.innerText = taskString;
   label.setAttribute("for", taskString);
-  label.className = "task";
+  label.className = "task todo__list-item--active";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
   checkBox.className = "todo-list__checkbox";
   checkBox.id = taskString;
   editInput.type = "text";
-  editInput.className = "todo__input-text input-text";
+  editInput.className = "todo__input-text input-text task";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
   editButton.className = "todo__action-text ";
 
   deleteButton.className = "todo__delete";
   deleteButtonImg.src = "./remove.svg";
+  deleteButtonImg.classList.add('delete__image')
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -64,6 +65,7 @@ var addTask = function () {
 
   //Append listItem to incompleteTaskHolder
   incompleteTaskHolder.appendChild(listItem);
+  listItem.classList.add('item-view')
   bindTaskEvents(listItem, taskCompleted);
 
   taskInput.value = "";
@@ -85,6 +87,7 @@ var editTask = function () {
   if (containsClass) {
     //switch to .editmode
     //label becomes the inputs value.
+    console.log('hello')
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
   } else {
@@ -113,6 +116,7 @@ var taskCompleted = function () {
   //Append the task list item to the #completed-tasks
   var listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
+  listItem.classList.add('todo__complete-label')
   bindTaskEvents(listItem, taskIncomplete);
 };
 
@@ -122,6 +126,8 @@ var taskIncomplete = function () {
   //When the checkbox is unchecked
   //Append the task list item to the #incompleteTasks.
   var listItem = this.parentNode;
+ 
+  listItem.classList.remove('todo__complete-label')
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
 };
