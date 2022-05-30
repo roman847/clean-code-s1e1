@@ -103,7 +103,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .todo-list__checkbox {
   margin: 0 10px;
 }
@@ -131,19 +130,14 @@ body {
 .todo__input-text {
   display: none;
 }
-
-
 .todo__list-item .input-text {
   display: inline-block;
   width: 224px;
 }
-
 .todo__list-item .todo__list-item--active {
   display: none;
 }
-
-
-.todo__complete-label{
+.todo__complete-label {
   text-decoration: line-through;
   color: #888;
 }
